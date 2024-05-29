@@ -13,10 +13,13 @@ export const productApi = createApi({
     getProductById: builder.query<any, string>({
       query: (id) => `${id}`,
     }),
-    filterProductsByTitle: builder.query<any, string>({
-      query: (title: string) => `search/${title}`,
+    filterProductsByTitle: builder.query({
+      query: (title) => `?title=${title}`,
+    }),
+    filterProductsByCategory: builder.query({
+      query: (category) => `?category=${category}`,
     }),
   }),
 });
 
-export const { useGetAllProductsQuery, useGetProductByIdQuery, useFilterProductsByTitleQuery } = productApi;
+export const { useGetAllProductsQuery, useGetProductByIdQuery, useFilterProductsByTitleQuery, useFilterProductsByCategoryQuery } = productApi;
