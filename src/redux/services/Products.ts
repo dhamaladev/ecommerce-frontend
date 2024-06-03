@@ -22,4 +22,9 @@ export const productApi = createApi({
   }),
 });
 
-export const { useGetAllProductsQuery, useGetProductByIdQuery, useFilterProductsByTitleQuery, useFilterProductsByCategoryQuery } = productApi;
+export const {
+  useGetAllProductsQuery,
+  useGetProductByIdQuery,
+  useFilterProductsByTitleQuery,
+  useFilterProductsByCategoryQuery,
+} = productApi;

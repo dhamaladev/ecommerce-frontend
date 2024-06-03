@@ -6,7 +6,7 @@ const SingleProduct = () => {
   const { id: idParam } = useParams<{ id: string | undefined }>();
   const id = idParam || "";
   const { data, error, isLoading } = useGetProductByIdQuery(id);
-  console.log(data);
+
   if (isLoading) return <h1>Loading...</h1>;
   return (
     <div className="px-10 py-6 bg-slate-800 text-slate-50">
